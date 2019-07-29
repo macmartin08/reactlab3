@@ -1,5 +1,5 @@
 import React from "react";
-import { A } from "hookrouter";
+import { Link } from "react-router-dom";
 
 function MainNav() {
   return (
@@ -7,10 +7,15 @@ function MainNav() {
       <div
         className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item"><A className="nav-link" href="/">Home</A></li>
-          <li className="nav-item"><A className="nav-link" href="/about">About</A></li>
-          <li className="nav-item"><A className="nav-link" href="/contact">Contact</A></li>
-        </ul>
+          <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">About</Link>
+          </li>
+
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link>
+          </li>
+</ul>
       </div>
     </nav>
   );
